@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import confetti from 'canvas-confetti';
 import Footer from '../components/Footer';
+import ParticleBackground from '../components/ParticleBackground';
 
 const Fun = () => {
   const [clickCount, setClickCount] = useState(0);
@@ -69,6 +70,7 @@ const Fun = () => {
 
   return (
     <div className="min-h-screen pt-40 md:pt-44 pb-24">
+        <ParticleBackground />
       {/* Hero Section */}
       <section className="relative px-4 mb-20">
         <div className="max-w-6xl mx-auto">
