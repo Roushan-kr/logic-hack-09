@@ -219,11 +219,11 @@ const Footer = () => {
                 <span>admin@fossptu.dev</span>
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+917484962276"
                 className="flex items-center gap-5 text-gray-400 hover:text-orange-400 transition-colors text-lg"
               >
                 <span className="text-3xl shrink-0">📞</span>
-                <span>+91 98765 43210</span>
+                <span>+91 74849 62276</span>
               </a>
               <div className="flex items-center gap-5 text-gray-400 text-lg">
                 <span className="text-3xl shrink-0">🌐</span>
