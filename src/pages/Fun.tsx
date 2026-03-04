@@ -291,7 +291,6 @@ const Fun = () => {
               { emoji: "🔥", fact: "The second half doubles your elimination risk to 33.33%!" },
               { emoji: "📱", fact: "QR codes can save your life - literally (in the game)!" },
               { emoji: "🍪", fact: "Free cookies are provided because coding is hard work!" },
-              { emoji: "🎵", fact: "The entire event has background music to keep vibes high!" },
               { emoji: "📝", fact: "You can bring 6 handwritten A4 sheets - no printed cheat sheets!" },
               { emoji: "👑", fact: "Team Leader has the power to decide who faces The Prop!" },
               { emoji: "🏆", fact: "Certificates AND medals for winners - double glory!" }

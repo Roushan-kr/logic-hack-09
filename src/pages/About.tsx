@@ -43,11 +43,6 @@ const About = () => {
       description: "Hidden QR codes across campus grant immunity. Find them before your competitors do!"
     },
     {
-      emoji: "🎵",
-      title: "Coding with Vibes",
-      description: "The entire contest is accompanied by fine music to keep the energy high!"
-    },
-    {
       emoji: "🍪",
       title: "Refreshments",
       description: "Cookies and refreshments provided to fuel your coding marathon!"

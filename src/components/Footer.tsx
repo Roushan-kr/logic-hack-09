@@ -1,33 +1,32 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Code, Heart, ExternalLink, ArrowUp, Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Code, Heart, ExternalLink, ArrowUp, Sparkles } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: '📸', label: 'Instagram', url: '#' },
-    { icon: '💼', label: 'LinkedIn', url: '#' },
-    { icon: '🐦', label: 'Twitter', url: '#' },
-    { icon: '📧', label: 'Email', url: 'mailto:logicloot@ikgptu.ac.in' },
+    { icon: "📸", label: "Instagram", url: "#" },
+    { icon: "💼", label: "LinkedIn", url: "#" },
+    { icon: "🐦", label: "Twitter", url: "#" },
+    { icon: "📧", label: "Email", url: "mailto:admin@fossptu.dev" },
   ];
 
   const quickLinks = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Rules', path: '/rules' },
-    { label: 'Timeline', path: '/timeline' },
-    { label: 'Register', path: '/register' },
-    { label: 'QR Hunt', path: '/qr-hunt' },
-    { label: 'Fun Zone', path: '/fun' },
-    { label: 'Contact', path: '/contact' },
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Rules", path: "/rules" },
+    { label: "Timeline", path: "/timeline" },
+    { label: "Register", path: "/register" },
+    { label: "QR Hunt", path: "/qr-hunt" },
+    { label: "Fun Zone", path: "/fun" },
+    { label: "Contact", path: "/contact" },
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="relative bg-[#0a0a1a] overflow-hidden">
-      
       {/* ── Gradient Top Border ── */}
       <div className="h-1 w-full bg-linear-to-r from-orange-500 via-yellow-400 to-green-500" />
 
@@ -36,26 +35,26 @@ const Footer = () => {
         <motion.div
           className="absolute -bottom-24 -right-24 w-125 h-125 opacity-[0.03]"
           animate={{ rotate: 360 }}
-          transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         >
           <div
             className="w-full h-full border-4 border-orange-500"
             style={{
               clipPath:
-                'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+                "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
             }}
           />
         </motion.div>
         <motion.div
           className="absolute -top-28 -left-28 w-100 h-100 opacity-[0.03]"
           animate={{ rotate: -360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
           <div
             className="w-full h-full border-4 border-yellow-500"
             style={{
               clipPath:
-                'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+                "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
             }}
           />
         </motion.div>
@@ -77,7 +76,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
             <div className="text-center lg:text-left flex-1 space-y-5">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
-                Ready to{' '}
+                Ready to{" "}
                 <span className="bg-linear-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
                   Loot the Logic
                 </span>
@@ -92,7 +91,7 @@ const Footer = () => {
                 className="px-12 py-6 bg-linear-to-r from-orange-500 to-yellow-500 rounded-full font-black text-white text-xl tracking-wider shadow-xl shadow-orange-500/30 hover:shadow-orange-500/60 transition-shadow whitespace-nowrap flex items-center gap-4"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: '0 0 40px rgba(249,115,22,0.5)',
+                  boxShadow: "0 0 40px rgba(249,115,22,0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -108,7 +107,6 @@ const Footer = () => {
       ══════════════════════════════════════ */}
       <div className="relative w-full max-w-350 mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 pt-8 pb-24">
         <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-0">
-
           {/* ═══ Column 1: Brand (Left) ═══ */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -209,33 +207,31 @@ const Footer = () => {
             <div className="space-y-6">
               {[
                 {
-                  emoji: '📅',
-                  title: '9th March 2026',
-                  sub: 'Mark your calendar!',
+                  emoji: "📅",
+                  title: "9th March 2026",
+                  sub: "Mark your calendar!",
                 },
                 {
-                  emoji: '⏰',
-                  title: '10:00 AM – 1:00 PM',
-                  sub: '3 hours of intense coding',
+                  emoji: "⏰",
+                  title: "10:00 AM – 1:00 PM",
+                  sub: "3 hours of intense coding",
                 },
                 {
-                  emoji: '📍',
-                  title: 'IKGPTU Campus',
-                  sub: 'CC Lab, Main Building',
+                  emoji: "📍",
+                  title: "IKGPTU Campus",
+                  sub: "CC Lab, Main Building",
                 },
                 {
-                  emoji: '🏆',
-                  title: 'Prizes & Goodies',
-                  sub: 'Certificates for all',
+                  emoji: "🏆",
+                  title: "Prizes & Goodies",
+                  sub: "Certificates for all",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
                   className="flex items-start gap-5 px-6 py-5 rounded-2xl bg-white/3 border border-white/5 hover:border-orange-500/20 transition-colors"
                 >
-                  <span className="text-3xl mt-0.5 shrink-0">
-                    {item.emoji}
-                  </span>
+                  <span className="text-3xl mt-0.5 shrink-0">{item.emoji}</span>
                   <div className="space-y-2">
                     <p className="text-white text-lg font-semibold leading-snug">
                       {item.title}
@@ -264,11 +260,11 @@ const Footer = () => {
 
             <div className="space-y-7">
               <a
-                href="mailto:logicloot@ikgptu.ac.in"
+                href="mailto:admin@fossptu.dev"
                 className="flex items-center gap-5 text-gray-400 hover:text-orange-400 transition-colors text-lg"
               >
                 <span className="text-3xl shrink-0">📧</span>
-                <span>logicloot@ikgptu.ac.in</span>
+                <span>admin@fossptu.dev</span>
               </a>
               <a
                 href="tel:+919876543210"
@@ -279,7 +275,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-5 text-gray-400 text-lg">
                 <span className="text-3xl shrink-0">🌐</span>
-                <span>logicloot.ikgptu.ac.in</span>
+                <span>c.fossptu.dev</span>
               </div>
             </div>
 
@@ -335,9 +331,8 @@ const Footer = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              Made with{' '}
-              <Heart className="w-6 h-6 text-red-500 animate-pulse" /> by
-              IKGPTU Students
+              Made with <Heart className="w-6 h-6 text-red-500 animate-pulse" />{" "}
+              by IKGPTU Students
             </motion.p>
 
             {/* Center */}
