@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import confetti from 'canvas-confetti';
-import Footer from '../components/Footer';
-import ParticleBackground from '../components/ParticleBackground';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import confetti from "canvas-confetti";
+import ParticleBackground from "../components/ParticleBackground";
 
 const Fun = () => {
   const [clickCount, setClickCount] = useState(0);
@@ -16,7 +15,7 @@ const Fun = () => {
     if (isRolling) return;
 
     setIsRolling(true);
-    setAttempts(prev => prev + 1);
+    setAttempts((prev) => prev + 1);
 
     // Simulate dice roll
     let rollCount = 0;
@@ -32,12 +31,12 @@ const Fun = () => {
 
         // Check if survived (not 1 in first half rules)
         if (finalResult !== 1) {
-          setSurvivalScore(prev => prev + 1);
+          setSurvivalScore((prev) => prev + 1);
           confetti({
             particleCount: 50,
             spread: 60,
             origin: { y: 0.7 },
-            colors: ['#00ff88', '#00d4ff']
+            colors: ["#00ff88", "#00d4ff"],
           });
         } else {
           // Eliminated!
@@ -45,7 +44,7 @@ const Fun = () => {
             particleCount: 100,
             spread: 100,
             origin: { y: 0.7 },
-            colors: ['#ff0000', '#ff6600']
+            colors: ["#ff0000", "#ff6600"],
           });
         }
       }
@@ -53,11 +52,26 @@ const Fun = () => {
   };
 
   const codingJokes = [
-    { setup: "Why do programmers prefer dark mode?", punchline: "Because light attracts bugs! 🐛" },
-    { setup: "Why was the JavaScript developer sad?", punchline: "Because he didn't Node how to Express himself! 😢" },
-    { setup: "Why do Java developers wear glasses?", punchline: "Because they can't C#! 👓" },
-    { setup: "What's a programmer's favorite hangout place?", punchline: "Foo Bar! 🍺" },
-    { setup: "Why did the developer go broke?", punchline: "Because he used up all his cache! 💸" }
+    {
+      setup: "Why do programmers prefer dark mode?",
+      punchline: "Because light attracts bugs! 🐛",
+    },
+    {
+      setup: "Why was the JavaScript developer sad?",
+      punchline: "Because he didn't Node how to Express himself! 😢",
+    },
+    {
+      setup: "Why do Java developers wear glasses?",
+      punchline: "Because they can't C#! 👓",
+    },
+    {
+      setup: "What's a programmer's favorite hangout place?",
+      punchline: "Foo Bar! 🍺",
+    },
+    {
+      setup: "Why did the developer go broke?",
+      punchline: "Because he used up all his cache! 💸",
+    },
   ];
 
   const [currentJoke, setCurrentJoke] = useState(0);
@@ -83,7 +97,7 @@ const Fun = () => {
               className="inline-block text-6xl mb-4"
               animate={{
                 rotate: [0, 20, -20, 0],
-                scale: [1, 1.2, 1]
+                scale: [1, 1.2, 1],
               }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
@@ -93,7 +107,8 @@ const Fun = () => {
               Fun <span className="text-orange-400">Zone</span>
             </h1>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              Take a break from the serious stuff! Games, jokes, and Easter eggs await!
+              Take a break from the serious stuff! Games, jokes, and Easter eggs
+              await!
             </p>
           </motion.div>
         </div>
@@ -119,11 +134,11 @@ const Fun = () => {
 
               {/* Dice Display */}
               <motion.div
-                className={`w-32 h-32 mx-auto mb-8 bg-linear-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center text-6xl font-black text-white shadow-2xl ${isRolling ? 'animate-bounce' : ''}`}
+                className={`w-32 h-32 mx-auto mb-8 bg-linear-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center text-6xl font-black text-white shadow-2xl ${isRolling ? "animate-bounce" : ""}`}
                 animate={isRolling ? { rotate: [0, 360] } : {}}
                 transition={{ duration: 0.3, repeat: isRolling ? Infinity : 0 }}
               >
-                {diceResult || '?'}
+                {diceResult || "?"}
               </motion.div>
 
               {/* Result Message */}
@@ -131,13 +146,16 @@ const Fun = () => {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className={`mb-6 p-4 rounded-xl ${diceResult === 1
-                    ? 'bg-red-500/20 border border-red-500/30'
-                    : 'bg-green-500/20 border border-green-500/30'
-                    }`}
+                  className={`mb-6 p-4 rounded-xl ${
+                    diceResult === 1
+                      ? "bg-red-500/20 border border-red-500/30"
+                      : "bg-green-500/20 border border-green-500/30"
+                  }`}
                 >
-                  <p className={`text-xl font-bold ${diceResult === 1 ? 'text-red-400' : 'text-green-400'}`}>
-                    {diceResult === 1 ? '💀 ELIMINATED!' : '✅ SURVIVED!'}
+                  <p
+                    className={`text-xl font-bold ${diceResult === 1 ? "text-red-400" : "text-green-400"}`}
+                  >
+                    {diceResult === 1 ? "💀 ELIMINATED!" : "✅ SURVIVED!"}
                   </p>
                 </motion.div>
               )}
@@ -149,11 +167,15 @@ const Fun = () => {
                   <p className="text-gray-400 text-sm">Attempts</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-green-400">{survivalScore}</p>
+                  <p className="text-3xl font-bold text-green-400">
+                    {survivalScore}
+                  </p>
                   <p className="text-gray-400 text-sm">Survived</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-red-400">{attempts - survivalScore}</p>
+                  <p className="text-3xl font-bold text-red-400">
+                    {attempts - survivalScore}
+                  </p>
                   <p className="text-gray-400 text-sm">Eliminated</p>
                 </div>
               </div>
@@ -165,7 +187,7 @@ const Fun = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {isRolling ? 'Rolling...' : 'Roll The Dice! 🎲'}
+                {isRolling ? "Rolling..." : "Roll The Dice! 🎲"}
               </motion.button>
             </div>
           </motion.div>
@@ -242,16 +264,18 @@ const Fun = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <p className="text-gray-500 mb-4">Click the cookie 10 times for a surprise!</p>
+            <p className="text-gray-500 mb-4">
+              Click the cookie 10 times for a surprise!
+            </p>
             <motion.button
               onClick={() => {
-                setClickCount(prev => prev + 1);
+                setClickCount((prev) => prev + 1);
                 if (clickCount >= 9) {
                   setShowEasterEgg(true);
                   confetti({
                     particleCount: 200,
                     spread: 100,
-                    origin: { y: 0.6 }
+                    origin: { y: 0.6 },
                   });
                 }
               }}
@@ -269,9 +293,12 @@ const Fun = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 className="mt-8 p-6 bg-linear-to-r from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-500/30"
               >
-                <h3 className="text-2xl font-bold text-white mb-2">🎉 Easter Egg Found!</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  🎉 Easter Egg Found!
+                </h3>
                 <p className="text-purple-400">
-                  You're officially a cookie monster! 🍪 Now go register for Logic Loot!
+                  You're officially a cookie monster! 🍪 Now go register for
+                  Logic Loot!
                 </p>
               </motion.div>
             )}
@@ -283,17 +310,39 @@ const Fun = () => {
       <section className="relative px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            💡 Fun Facts About <span className="text-orange-400">Logic Loot</span>
+            💡 Fun Facts About{" "}
+            <span className="text-orange-400">Logic Loot</span>
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { emoji: "🎲", fact: "You have a 16.67% chance of elimination in the first half!" },
-              { emoji: "🔥", fact: "The second half doubles your elimination risk to 33.33%!" },
-              { emoji: "📱", fact: "QR codes can save your life - literally (in the game)!" },
-              { emoji: "🍪", fact: "Free cookies are provided because coding is hard work!" },
-              { emoji: "📝", fact: "You can bring 6 handwritten A4 sheets - no printed cheat sheets!" },
-              { emoji: "👑", fact: "Team Leader has the power to decide who faces The Prop!" },
-              { emoji: "🏆", fact: "Certificates AND medals for winners - double glory!" }
+              {
+                emoji: "🎲",
+                fact: "You have a 16.67% chance of elimination in the first half!",
+              },
+              {
+                emoji: "🔥",
+                fact: "The second half doubles your elimination risk to 33.33%!",
+              },
+              {
+                emoji: "📱",
+                fact: "QR codes can save your life - literally (in the game)!",
+              },
+              {
+                emoji: "🍪",
+                fact: "Free cookies are provided because coding is hard work!",
+              },
+              {
+                emoji: "📝",
+                fact: "You can bring 6 handwritten A4 sheets - no printed cheat sheets!",
+              },
+              {
+                emoji: "👑",
+                fact: "Team Leader has the power to decide who faces The Prop!",
+              },
+              {
+                emoji: "🏆",
+                fact: "Certificates AND medals for winners - double glory!",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -317,8 +366,6 @@ const Fun = () => {
           <MotivationalQuote />
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
@@ -326,14 +373,40 @@ const Fun = () => {
 // Motivational Quote Component
 const MotivationalQuote = () => {
   const quotes = [
-    { quote: "Code is like humor. When you have to explain it, it's bad.", author: "Cory House" },
-    { quote: "First, solve the problem. Then, write the code.", author: "John Johnson" },
-    { quote: "The best error message is the one that never shows up.", author: "Thomas Fuchs" },
-    { quote: "It's not a bug – it's an undocumented feature.", author: "Anonymous" },
-    { quote: "Debugging is twice as hard as writing the code.", author: "Brian Kernighan" },
-    { quote: "Any fool can write code that a computer can understand.", author: "Martin Fowler" },
-    { quote: "Programming isn't about what you know; it's about what you can figure out.", author: "Chris Pine" },
-    { quote: "The only way to learn a new programming language is by writing programs in it.", author: "Dennis Ritchie" }
+    {
+      quote: "Code is like humor. When you have to explain it, it's bad.",
+      author: "Cory House",
+    },
+    {
+      quote: "First, solve the problem. Then, write the code.",
+      author: "John Johnson",
+    },
+    {
+      quote: "The best error message is the one that never shows up.",
+      author: "Thomas Fuchs",
+    },
+    {
+      quote: "It's not a bug – it's an undocumented feature.",
+      author: "Anonymous",
+    },
+    {
+      quote: "Debugging is twice as hard as writing the code.",
+      author: "Brian Kernighan",
+    },
+    {
+      quote: "Any fool can write code that a computer can understand.",
+      author: "Martin Fowler",
+    },
+    {
+      quote:
+        "Programming isn't about what you know; it's about what you can figure out.",
+      author: "Chris Pine",
+    },
+    {
+      quote:
+        "The only way to learn a new programming language is by writing programs in it.",
+      author: "Dennis Ritchie",
+    },
   ];
 
   const [currentQuote, setCurrentQuote] = useState(0);
@@ -344,7 +417,7 @@ const MotivationalQuote = () => {
       particleCount: 30,
       spread: 50,
       origin: { y: 0.7 },
-      colors: ['#ff6b35', '#f7c435']
+      colors: ["#ff6b35", "#f7c435"],
     });
   };
 

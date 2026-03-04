@@ -11,7 +11,6 @@ import {
   Twitter,
 } from "lucide-react";
 import confetti from "canvas-confetti";
-import Footer from "../components/Footer";
 import ParticleBackground from "../components/ParticleBackground";
 
 const Contact = () => {
@@ -475,8 +474,6 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
