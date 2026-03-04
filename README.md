@@ -1,19 +1,94 @@
-# React + TypeScript + Vite
+# 🧠 Logic Hack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend web application built with **React + TypeScript + Vite**.
 
-Currently, two official plugins are available:
+Live Site: [https://loot.fossptu.dev/](https://loot.fossptu.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Logic Hack is a modern web application designed for coding challenges and competitive programming events. It provides a fast, responsive, and scalable frontend architecture using Vite for lightning‑fast builds and React for a modular UI system.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Tech Stack
+
+* ⚛️ React
+* 🟦 TypeScript
+* ⚡ Vite
+* 🎨 CSS / Tailwind (if used)
+* 🧹 ESLint
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/logic-hack.git
+cd logic-hack
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 💻 Development
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The app will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🏗 Build for Production
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── assets/
+ ├── components/
+ ├── pages/
+ ├── hooks/
+ ├── utils/
+ ├── App.tsx
+ └── main.tsx
+```
+
+---
+
+## 🧹 ESLint Configuration (Optional Advanced Setup)
+
+For production-grade applications, enable type-aware linting:
 
 ```js
 export default defineConfig([
@@ -21,30 +96,23 @@ export default defineConfig([
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
       tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
     ],
     languageOptions: {
       parserOptions: {
         project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ]);
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
+<<<<<<< HEAD
 ```js
 // eslint.config.js
 import reactX from "eslint-plugin-react-x";
@@ -98,3 +166,35 @@ If `VITE_PUBLIC_POSTHOG_RHOST` is enabled, please ensure that `localhost` is all
 ```
 
 ```
+=======
+## 🌍 Deployment
+
+This project can be deployed easily on:
+
+* Vercel
+* Netlify
+* Render
+* Any static hosting provider
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 👨‍💻 Author
+
+Built with ❤️ for competitive programming and logic-based challenges.
+
+---
+
+If you want, I can also create:
+
+* 🔥 A professional GitHub-optimized README with badges
+* 📸 Screenshot section
+* 🧩 Contributing guidelines
+* 🐛 Issue & PR templates
+* 🚀 CI/CD setup instructions
+>>>>>>> f5626c8164f8f820fac840ac26d31e24ce2b4645

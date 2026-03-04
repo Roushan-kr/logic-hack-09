@@ -227,7 +227,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-5 text-gray-400 text-lg">
                 <span className="text-3xl shrink-0">🌐</span>
-                <span>c.fossptu.dev</span>
+                <span>loot.fossptu.dev</span>
               </div>
             </div>
 
