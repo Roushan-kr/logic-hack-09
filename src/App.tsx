@@ -1,16 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Rules from "./pages/Rules";
-import Register from "./pages/Register";
-import Timeline from "./pages/Timeline";
-import Contact from "./pages/Contact";
-import Fun from "./pages/Fun";
-import QRHunt from "./pages/QRHunt";
-import Loader from "./components/Loader";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Rules from './pages/Rules';
+import Register from './pages/Register';
+import Timeline from './pages/Timeline';
+import Contact from './pages/Contact';
+import Fun from './pages/Fun';
+import QRHunt from './pages/QRHunt';
+import Loader from './components/Loader';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +45,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/fun" element={<Fun />} />
             <Route path="/qr-hunt" element={<QRHunt />} />
+            <Route path="/event" element={<Evenet />} />
           </Routes>
         </main>
 
@@ -48,6 +53,11 @@ function App() {
       </div>
     </Router>
   );
+}
+
+function Evenet() {
+  window.location.replace(import.meta.env.VITE_REGISTER_PLATFORM);
+  return <></>;
 }
 
 export default App;
